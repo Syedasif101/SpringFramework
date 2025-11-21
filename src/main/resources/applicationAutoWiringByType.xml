@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="specification" class="com.autowiring.byType.Specification">
+
+        <property name="make" value="Mahindra"/>
+        <property name="model" value="Safari"/>
+
+    </bean>
+
+
+<!--    <bean id="specification1" class="com.autowiring.byType.Specification">-->
+
+<!--        <property name="make" value="Mahindra1"/>-->
+<!--        <property name="model" value="Safari1"/>-->
+
+<!--    </bean>-->
+
+    <bean id="myCar" class="com.autowiring.byType.Car" autowire="byType"/>
+
+</beans>

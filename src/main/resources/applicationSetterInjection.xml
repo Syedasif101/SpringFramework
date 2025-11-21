@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="carSpecification" class="com.example.setter.injection.Specification">
+
+        <property name="make" value="Alto k10"/>
+        <property name="model" value="Alto"/>
+    </bean>
+
+    <bean id="myCar" class="com.example.setter.injection.Car">
+        <property name="specification" ref="carSpecification"/>
+    </bean>
+
+</beans>
